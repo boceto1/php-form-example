@@ -55,10 +55,22 @@
         </div>
         <div>
           <label for="gender">Gender</label>
-          <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="prefer-not-say">Prefer not say</option>
+          <select id="gender" name="gender" required >
+            <option value="male"
+              <?php ($_POST["gender"] == "male") ? print("selected") : '' ?>
+            >
+              Male
+            </option>
+            <option value="female" 
+              <?php ($_POST["gender"] == "female") ? print("selected") : '' ?>
+            >
+              Female
+            </option>
+            <option value="prefer-not-say"
+            <?php ($_POST["gender"] == "prefer-not-say") ? print("selected") : '' ?>
+            >
+              Prefer not say
+            </option>
           </select>
         </div>
         <input type="submit" value="Enviar">
